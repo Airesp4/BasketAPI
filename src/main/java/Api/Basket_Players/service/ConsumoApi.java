@@ -17,9 +17,9 @@ public class ConsumoApi {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Erro ao consumir API", e);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Requisição Interrompida", e);
         }
 
         String json = response.body();
