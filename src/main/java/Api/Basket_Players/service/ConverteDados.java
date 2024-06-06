@@ -34,4 +34,15 @@ public class ConverteDados implements IConverteDados{
         }
     }
 
+    @Override
+    public String obterProximaPagina(String json) {
+        try {
+            JsonNode rootNode = mapper.readTree(json);
+            JsonNode nextPageNode = rootNode.path("next");
+            return nextPageNode.isNull() ? null : nextPageNode.asText();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
