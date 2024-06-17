@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.forEach(item => {
                     const listItem = document.createElement("li");
 
-                    // Formatação dos dados conforme a classe DadosJogador
                     listItem.textContent = `ID: ${item.id}, Nome: ${item.nome}, Idade: ${item.idade}, Minutos Jogados: ${item.minutosJogados} min, Total Pontos: ${item.pontos}, Time: ${item.time}, Temporada: ${item.temporada}`;
                     resultList.appendChild(listItem);
                 });
