@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,45 +9,34 @@
 </head>
 
 <body>
-    <h1>Basket Players</h1>
-    <div>
-        <h2>Filtrar por Jogador</h2>
-        <input type="text" id="input-nome-jogador" placeholder="Nome do Jogador">
-        <button id="btn-filtrar-jogador">Filtrar</button>
-        <ul id="jogador-list"></ul>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="images/logo_nba.png" alt="Logo NBA"></a>
+        </div>
+    </header>
+
+    <div class="box">
+        <h1>Filtros NBA</h1>
+        <form id="filtro-form">
+            <select id="select-filtro" name="filtro">
+                <option value="jogador">Nome do Jogador</option>
+                <option value="temporada">Número da Temporada</option>
+                <option value="jogador-ano">Nome do Jogador e Ano</option>
+                <option value="jogadores-time">Jogadores do Time</option>
+            </select>
+            <input id="input-valor" name="valor" placeholder="Insira o valor">
+            <input id="input-valor-2" name="valor-2" placeholder="Insira o segundo valor"style="display: none;">
+            <button type="button" id="btn-filtrar">Filtrar</button>
+            <label for="checkbox-relatorio">Deseja gerar o relatório?</label>
+            <input type="checkbox" id="checkbox-relatorio" class="checkbox-relatorio" name="relatorio" value="true">
+        </form>
+        <ul id="result-list"></ul>
     </div>
 
-    <div>
-        <h2>Filtrar por Temporada</h2>
-        <input type="number" id="input-n-temporada" placeholder="Número da Temporada">
-        <button id="btn-filtrar-temporada">Filtrar</button>
-        <ul id="temporada-list"></ul>
-    </div>
-
-    <div>
-        <h2>Filtrar Jogador por Ano</h2>
-        <input type="text" id="input-nome-jogador-ano" placeholder="Nome do Jogador">
-        <input type="number" id="input-n-temporada-jogador-ano" placeholder="Número da Temporada">
-        <button id="btn-filtrar-jogador-ano">Filtrar</button>
-        <ul id="jogador-ano-list"></ul>
-    </div>
-
-    <div>
-        <h2>Filtrar por Time</h2>
-        <input type="number" id="input-n-temporada-time" placeholder="Número da Temporada">
-        <button id="btn-filtrar-time">Filtrar</button>
-        <ul id="time-list"></ul>
-    </div>
-
-    <div>
-        <h2>Filtrar Jogadores por Time</h2>
-        <input type="text" id="input-sigla-time" placeholder="Sigla do Time">
-        <input type="number" id="input-n-temporada-jogadores-time" placeholder="Número da Temporada">
-        <button id="btn-filtrar-jogadores-time">Filtrar</button>
-        <ul id="jogadores-time-list"></ul>
-    </div>
+    <footer>
+        <h1>Deseja acompanhar os dados da NBA 2023/2024? <a href="https://www.flashscore.com.br/basquete/eua/nba/#/fogQndR6/draw" target="_blank"><span class="underline color-text">Clique aqui.</span></a></h1>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>
-
 </html>

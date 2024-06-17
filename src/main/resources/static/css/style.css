@@ -1,38 +1,119 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    text-align: center;
+body {
+    background-image: url('../images/wallpaper.jpg');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h2 {
+h1 {
+    margin: 40px 0;
+    color: aliceblue;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
     margin-top: 20px;
 }
 
-input[type="text"],
-input[type="number"],
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
-    font-size: 16px;
+.logo-container img {
+    width: 100px;
+    height: auto;
 }
 
-button {
-    cursor: pointer;
-    background-color: #007bff;
+footer {
+    font-size: 10px;
+    text-align: center;
     color: white;
-    border: none;
+    padding: -15px 0;
+    margin-top: -60px;
+}
+
+label {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.checkbox-relatorio {
+    transform: scale(0.8);
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.color-text {
+    color: rgb(14, 63, 92);
+}
+
+.box, form {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #731020;
+    ;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: -4px -5px 7px 12px rgb(154 70 70 / 20%);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    }
+
+input {
+    width: 600px;
+    height: 30px;
+    border-radius: 30px;
+    padding: 0 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+button {
+    width: 600px;
+    height: px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(14, 63, 92);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-button:active {
-    background-color: #004185;
+button:hover {
+    background-color: rgb(7, 49, 70);
+}
+
+#result-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#result-list li:last-child {
+    margin-bottom: 0;
+}
+
+#result-list li{
+    margin-bottom: 10px;
 }

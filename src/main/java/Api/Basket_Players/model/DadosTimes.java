@@ -5,14 +5,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record DadosTimes(@JsonAlias("id") Integer id,
-                         @JsonAlias("team") String time,
-                         @JsonAlias("player_name") String nome,
-                         @JsonAlias("season") Integer temporada) {
+                        @JsonAlias("player_name") String nome,
+                        @JsonAlias("age") Integer idade,
+                        @JsonAlias("minutes_played") Integer minutosJogados,
+                        @JsonAlias("PTS") Integer pontos,
+                        @JsonAlias("team") String time,
+                        @JsonAlias("season") Integer temporada) {
 
     @Override
     public final String toString() {
         
-        return "Time: " + time + " ID_Jogador: " + id
-        + " Nome: " + nome;
+        return "ID: " + id + " Nome do Jogador: " + nome + " Idade: " + idade +
+        " Minutos Jogados: " + minutosJogados + " Pontos: " + pontos + " Time: " + time +
+        " Temporada: " + temporada;
     }
 }
