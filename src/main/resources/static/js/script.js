@@ -4,12 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputValor2 = document.getElementById("input-valor-2");
     const checkboxRelatorio = document.getElementById("checkbox-relatorio");
     const resultList = document.getElementById("result-list");
+    const jogadorInputs = [
+        document.getElementById("input-valor-1"),
+        document.getElementById("input-valor-2"),
+        document.getElementById("input-valor-3"),
+        document.getElementById("input-valor-4"),
+        document.getElementById("input-valor-5")
+    ];
 
     selectFiltro.addEventListener("change", function () {
         if (selectFiltro.value === "jogador-ano" || selectFiltro.value === "jogadores-time") {
             inputValor2.style.display = "inline";
         } else {
             inputValor2.style.display = "none";
+        }
+
+        if (selectFiltro.value === "criar-time") {
+            jogadorInputs.forEach(input => input.style.display = "inline");
+        } else {
+            jogadorInputs.forEach(input => input.style.display = "none");
         }
     });
 
@@ -28,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 data.forEach(item => {
                     const listItem = document.createElement("li");
-
                     listItem.textContent = `ID: ${item.id}, Nome: ${item.nome}, Idade: ${item.idade}, Minutos Jogados: ${item.minutosJogados} min, Total Pontos: ${item.pontos}, Time: ${item.time}, Temporada: ${item.temporada}`;
                     resultList.appendChild(listItem);
                 });
