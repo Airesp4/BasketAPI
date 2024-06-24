@@ -49,3 +49,8 @@ Este projeto é uma aplicação que consulta informações sobre a NBA utilizand
 ## Considerações
 
 O projeto foi realizado para estudo de programação orientada a objetos em Java e manipulação de APIs com Spring Boot. Este projeto foi desenvolvido no contexto de um trabalho do curso de Ciências da Computação da Universidade FUMEC, visando aprofundar conhecimentos em integração de APIs e desenvolvimento full-stack.
+
+## Observações
+
+Para iniciar o projeto, baixe a pasta e execute o arquivo "run.bat" que abrirá a página para interação.
+Projeto realizado com participação: https://github.com/J0rgeGabriel
