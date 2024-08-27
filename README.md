@@ -53,4 +53,6 @@ O projeto foi realizado para estudo de programação orientada a objetos em Java
 ## Observações
 
 Para iniciar o projeto, baixe a pasta e execute o arquivo "run.bat" que abrirá a página para interação.
+Para execução é necessário ter instalado o maven e JDK 17.
+
 Projeto realizado com participação: https://github.com/J0rgeGabriel
